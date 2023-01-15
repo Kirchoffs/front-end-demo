@@ -1,4 +1,4 @@
-module.exports = function getDefaultColors () {
+module.exports = function getDefaultColors() {
   return [
     "#1ABC9C",
     "#2ECC71",

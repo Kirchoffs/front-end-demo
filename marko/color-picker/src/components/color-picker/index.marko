@@ -1,21 +1,23 @@
-import getDefaultColors from '../../util/default-colors';
-
+import getDefaultColors from "../../util/default-colors";
 class {
-    onInput(input) {
-        const colors = input.colors || getDefaultColors();
+  onInput(input) {
+    const colors = input.colors || getDefaultColors();
 
-        this.state = {
-            selectedColor: colors[0],
-            colors
-        };
-    }
+    this.state = {
+      selectedColor: colors[0],
+      colors,
+    };
+  }
 
-    handleColorSelected(color) {
-        this.state.selectedColor = color;
-    }
+  handleColorSelected(color) {
+    this.state.selectedColor = color;
+  }
 }
 
 <div>
-    <color-picker-header color=state.selectedColor />
-    <color-picker-footer colors=state.colors on-color-selected('handleColorSelected') />
+  <color-picker-header color=state.selectedColor/>
+  <color-picker-footer
+    colors=state.colors
+    on-color-selected("handleColorSelected")
+  />
 </div>
