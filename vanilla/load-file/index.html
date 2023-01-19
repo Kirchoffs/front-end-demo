@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<head>
+  <style>
+    .center {
+      text-align: center
+    }
+    .input-style {
+      margin: 15px;
+    }
+    .area-style {
+      width: 600px;
+      height: 300px;
+    }
+  </style>
+</head>
+<html lang="en">
+  <body class="center">
+    <div class="input-style">
+      <input type="file" id="file-input" />
+    </div>
+    <div>
+      <textarea rows=20 id="area" class="area-style"></textarea>
+    </div>
+
+    <script type="text/javascript">
+      function readSingleFile(event) {
+        // Retrieve the first (and only!) File from the FileList object
+        var f = event.target.files[0]; 
+
+        if (f) {
+          var r = new FileReader();
+          r.onload = function(e) { 
+            var contents = e.target.result;
+            alert(
+                  "Got the file.\n" +
+                  "name: " + f.name + "\n" +
+                  "type: " + f.type + "\n" +
+                  "size: " + f.size + " bytes\n" +
+                  "starts with: " + contents.substr(1, contents.indexOf("\n"))
+            );  
+            document.getElementById('area').value = contents;
+          }
+          r.readAsText(f);
+
+        } else { 
+          alert("Failed to load file");
+        }
+      }
+
+      document.getElementById('file-input').addEventListener('change', readSingleFile, false);
+    </script>
+  </body>
+</html>
