@@ -1,6 +1,6 @@
-# Thanks for checking out Marko
+# Color Picker
 
-# Installation
+## Installation
 
 ```
 npx @marko/create marko-app --template basic
@@ -19,5 +19,5 @@ This project is powered by `@marko/serve` and `@marko/build`.
 
 ## Adding Pages
 
-Pages map to the directory structure. You can add additional pages by creating files/directories under `src/pages` with `.marko` files.  Learn more in the [`@marko/serve` docs](https://github.com/marko-js/cli/blob/master/packages/serve/README.md).
+Pages map to the directory structure. You can add additional pages by creating files/directories under `src/pages` with `.marko` files. 
 
