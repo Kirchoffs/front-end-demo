@@ -32,7 +32,7 @@ class {
 }
 
 <div>
-  <p style={ backgroundColor: state.color }>${state.key}</p>
+  <p style={backgroundColor: state.color}>${state.key}</p>
   <p>${state.value}</p>
 </div>
 ```
