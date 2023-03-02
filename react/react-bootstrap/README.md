@@ -16,4 +16,5 @@ In Bootstrap 5, my-5 is a utility class that adds a margin of 5 units of size 1r
 ```
 >> npm i -g mdb-cli
 >> mdb login
+>> mdb publish
 ```
