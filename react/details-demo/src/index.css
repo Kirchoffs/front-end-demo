@@ -1,0 +1,51 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.page {
+  font-family: sans-serif;
+  padding-left: 280px;
+}
+
+.menu-list {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 280px;
+  list-style: none;
+  background-color: WhiteSmoke;
+  padding: 0;
+  margin: 0;
+  padding-top: 30px;
+  overflow: auto;
+}
+
+.menu-list li {
+  padding: 5px 15px;
+  color: SteelBlue;
+}
+
+.menu-list li.is-active {
+  background-color: SteelBlue;
+  color: white !important;
+}
+
+.menu-list li span {
+  cursor: pointer;
+}
+
+.stage {
+  padding: 30px;
+}
+
+.btn-primary {
+  background-color: SteelBlue;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
