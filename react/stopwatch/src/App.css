@@ -1,0 +1,40 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+.major-clock {
+  padding: 5% 0 2% 0;
+  text-align: center;
+  font-family: monospace;
+  font-size: 4em;
+}
+
+.minor-clock {
+  margin: 10px;
+  text-align: center;
+  font-family: monospace;
+  font-size: 1.5em;
+}
+
+button {
+  background-color: SteelBlue;
+  color: white;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.button-holder {
+  display: flex;
+  justify-content: center;
+  gap: 5%;
+}
+
+.split-times {
+  margin: 50px;
+}
