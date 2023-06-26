@@ -12,7 +12,7 @@ const sadMood = {
 
 const MoodContext = React.createContext(happyMood);
 
-const consumerStyle = {
+const consumerContainerStyle = {
   padding: "10px 0",
 }
 
@@ -58,7 +58,7 @@ class MoodButtons extends React.Component {
 const ContextAPIDemo = () => (
   <div>
     <MoodProvider>
-      <div style={consumerStyle}>
+      <div style={consumerContainerStyle}>
         <MoodButtons />
       </div>
     </MoodProvider>

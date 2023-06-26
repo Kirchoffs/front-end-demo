@@ -8,6 +8,7 @@ import UserList from './components/UserList';
 import SizeVariableClassComponent from './components/SizeVariableClassComponent';
 import SizeVariableFunctionComponent from './components/SizeVariableFunctionComponent';
 import ContextAPIDemo from './components/ContextAPIDemo';
+import JokeDemo from './components/JokeDemo';
 
 const routeMap = {
   "dummy": Dummy,
@@ -16,6 +17,7 @@ const routeMap = {
   "size-variable-class-component": SizeVariableClassComponent,
   "size-variable-function-component": SizeVariableFunctionComponent,
   "context-api-demo": ContextAPIDemo,
+  "joke-demo": JokeDemo,
 }
 
 class App extends React.PureComponent {
