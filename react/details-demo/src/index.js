@@ -9,6 +9,8 @@ import SizeVariableClassComponent from './components/SizeVariableClassComponent'
 import SizeVariableFunctionComponent from './components/SizeVariableFunctionComponent';
 import ContextAPIDemo from './components/ContextAPIDemo';
 import JokeDemo from './components/JokeDemo';
+import RenderProps from './components/RenderProps';
+import RenderPropsMore from './components/RenderPropsMore';
 
 const routeMap = {
   "dummy": Dummy,
@@ -18,6 +20,8 @@ const routeMap = {
   "size-variable-function-component": SizeVariableFunctionComponent,
   "context-api-demo": ContextAPIDemo,
   "joke-demo": JokeDemo,
+  "render-props": RenderProps,
+  "render-props-more": RenderPropsMore,
 }
 
 class App extends React.PureComponent {
