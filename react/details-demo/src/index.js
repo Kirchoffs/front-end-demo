@@ -13,6 +13,7 @@ import JokeDemo from './components/JokeDemo';
 import RenderProps from './components/RenderProps';
 import RenderPropsMore from './components/RenderPropsMore';
 import TabsDemo from './components/TabsDemo';
+import ReduxDemo from './components/OldReduxDemo';
 
 const routeMap = {
   "dummy": Dummy,
@@ -25,7 +26,8 @@ const routeMap = {
   "joke-demo": JokeDemo,
   "render-props": RenderProps,
   "render-props-more": RenderPropsMore,
-  "tabs-demo": TabsDemo
+  "tabs-demo": TabsDemo,
+  "redux-demo": ReduxDemo,
 }
 
 class App extends React.PureComponent {
