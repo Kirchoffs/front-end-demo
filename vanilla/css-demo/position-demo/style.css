@@ -1,0 +1,69 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.holder {
+  background-color: pink;
+  margin: 10px auto;
+  width: 200px;
+  height: 200px;
+}
+
+.relative {
+  position: relative;
+}
+
+.alpha {
+  background-color: aqua;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  left: 25%
+}
+
+.beta {
+  background-color: yellow;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  left: 50%;
+  top: 0;
+}
+
+.gamma {
+  background-color: green;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  left: 75%;
+  top: 0;
+}
+
+.delta {
+  background-color: blue;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  left: 100%;
+  top: 0;
+}
+
+.gradient {
+  background-image:
+    linear-gradient(0deg, aqua, aqua),
+    linear-gradient(0deg, yellow, yellow),
+    linear-gradient(0deg, green, green),
+    linear-gradient(0deg, blue, blue);
+  background-position:
+    25% 0,
+    50% 0,
+    75% 0,
+    100% 0;
+  background-size:
+    50px 50px,
+    50px 50px,
+    50px 50px,
+    50px 50px;
+  background-repeat: no-repeat;
+}
