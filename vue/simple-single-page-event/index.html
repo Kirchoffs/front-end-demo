@@ -16,16 +16,20 @@
     <header>
       <h1>Vue Events</h1>
     </header>
-    <section id="events">
-      <h2>Events in Action</h2>
-      <button v-on:click="increase(2)">Increase</button>
-      <!-- <button v-on:click="counter++">Increase</button> -->
-      <button v-on:click="decrease(1)">Decrease</button>
-      <!-- <button v-on:click="counter--">Decrease</button> -->
-      <p>Score: {{ score }}</p>
+    <div id="events">
+      <form v-on:submit.prevent="submitForm">
+        <h2>Events in Action</h2>
+        <button type="button" v-on:click="increase(2)">Increase</button>
+        <!-- <button v-on:click="counter++">Increase</button> -->
+        <button type="button" v-on:click="decrease(1)">Decrease</button>
+        <!-- <button v-on:click="counter--">Decrease</button> -->
+        <p>Score: {{ score }}</p>
 
-      <input type="text" v-on:input="setName($event, 'Hi')">
-      <p>Your name: {{ name }}</p>
-    </section>
+        <input type="text" v-on:input="setName($event, 'Hi')">
+        <p>Your name: {{ name }}</p>
+
+        <button>Submit</button>
+      </form>
+    </div>
   </body>
 </html>

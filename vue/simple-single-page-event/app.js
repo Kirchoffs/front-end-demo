@@ -13,7 +13,11 @@ const app = Vue.createApp({
       this.score = this.score - delta;
     },
     setName(event, greeting) {
-      this.name = greeting + ' ' + event.target.value;
+      const name = event.target.value;
+      this.name = greeting + ' ' + name.charAt(0).toUpperCase() + name.slice(1);
+    },
+    submitForm() {
+      alert('Submitted!');
     }
   }
 });
