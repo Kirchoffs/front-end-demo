@@ -17,19 +17,23 @@
       <h1>Vue Events</h1>
     </header>
     <div id="events">
-      <form v-on:submit.prevent="submitForm">
+      
         <h2>Events in Action</h2>
         <button type="button" v-on:click="increase(2)">Increase</button>
         <!-- <button v-on:click="counter++">Increase</button> -->
-        <button type="button" v-on:click="decrease(1)">Decrease</button>
+        <button type="button" v-on:click.right="decrease(1)">Decrease</button>
         <!-- <button v-on:click="counter--">Decrease</button> -->
+        <p v-once>Starting Score: {{ score }}</p>
         <p>Score: {{ score }}</p>
 
-        <input type="text" v-on:input="setName($event, 'Hi')">
-        <p>Your name: {{ name }}</p>
+        <input type="text" v-on:input="setName($event, 'Hi')" v-on:keyup.enter="confirmInput()">
+        <p>Your name: {{ confirmedName }}</p>
 
-        <button>Submit</button>
-      </form>
+        <div>
+          <form v-on:submit.prevent="submitForm">
+            <button>Submit</button>
+          </form>
+        </div>
     </div>
   </body>
 </html>
