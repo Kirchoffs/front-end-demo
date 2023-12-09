@@ -25,19 +25,9 @@
         <p v-once>Starting Score: {{ score }}</p>
         <p>Score: {{ score }}</p>
 
-        <input type="text" v-on:input="setName($event)" v-on:keyup.enter="confirmInput('Hi')">
-        <p>Your name: {{ confirmedName }}</p>
-
-        <input type="text" v-model="message">
-        <p>{{ message }}</p>
-
-        <p>{{ outputAll() }}</p>
-
-        <div>
-          <form v-on:submit.prevent="submitForm">
-            <button>Submit</button>
-          </form>
-        </div>
+        <input type="text" v-model="name">
+        <p>Your name: {{ name }}</p>
+        <p>Your name: {{ fullname }}</p>
     </div>
   </body>
 </html>

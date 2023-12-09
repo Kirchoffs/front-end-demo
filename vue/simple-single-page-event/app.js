@@ -3,7 +3,8 @@ const app = Vue.createApp({
     return {
       score: 0,
       name: 'Who?',
-      confirmedName: 'Who?'
+      confirmedName: 'Who?',
+      message: 'What?',
     };
   },
   methods: {
@@ -13,19 +14,22 @@ const app = Vue.createApp({
     decrease(delta) {
       this.score = this.score - delta;
     },
-    setName(event, greeting) {
+    setName(event) {
       const name = event.target.value;
       if (!name) {
         this.name = 'Who?';
         return;
       }
-      this.name = greeting + ' ' + name.charAt(0).toUpperCase() + name.slice(1);
+      this.name = name.charAt(0).toUpperCase() + name.slice(1);
     },
-    confirmInput() {
-      this.confirmedName = this.name;
+    confirmInput(greeting) {
+      this.confirmedName = greeting + ' ' + this.name;
     },
     submitForm() {
       alert('Submitted!');
+    },
+    outputAll() {
+      return this.name + ': ' + this.message;
     }
   }
 });
