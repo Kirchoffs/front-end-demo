@@ -38,3 +38,26 @@ The PureComponent class is an extension of Component that provides an automatic 
 The shallow comparison means that it compares the references of the props and state objects, as well as the primitive values within them. If the references and primitive values are the same, React assumes that the component does not need to be re-rendered.
 
 It's important to note that this shallow comparison may not be suitable for all scenarios. If your component's props or state contain complex data structures or nested objects, the shallow comparison may not detect deep changes. In such cases, you should avoid using PureComponent and use Component instead or consider implementing your own `shouldComponentUpdate` method to perform a more in-depth comparison.
+
+## Event Handler
+### Event Handler
+#### Longhand Version
+```
+const handleClick = () => {
+    console.log("I was clicked");
+}
+
+<div onClick={handleClick}></div>
+```
+
+#### Shorthand Version
+```
+<div onClick={() => console.log("I was clicked")}></div>
+```
+
+## React Minor Points
+- React does not print booleans, nulls, undefined.
+
+## JS Minor Points
+- `||` gives back the first truthy value, or the last value if all are falsy.
+- `&&` gives back the first falsy value, or the last value if all are truthy.

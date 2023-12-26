@@ -44,3 +44,40 @@ Enter Key Trigger
 ```
 <input type="text" v-on:keyup.enter="confirmInput" />
 ```
+
+### Short Hand
+#### @click is short for v-on:click
+```
+<button v-on:click="click()">button</button>
+
+<button @click="click()">button</button>
+```
+
+#### :value is short for v-bind:value
+```
+<input type="text" v-bind:value="inputValue" @input="updateInputValue()">
+
+<input type="text" :value="inputValue" @input="updateInputValue()">
+```
+
+#### :style is short for v-bind:style
+```
+<div class="demo" :style="{borderColor: boxASelected ? 'red' : 'LightGrey'}" @click="boxSelected('A')"></div>
+```
+
+```
+<div class="demo" :style="{'border-color': boxASelected ? 'red' : 'LightGrey'}" @click="boxSelected('A')"></div>
+```
+
+#### :class is short for v-bind:class
+```
+<div :class="boxASelected ? 'demo active' : 'demo'" @click="boxSelected('A')"></div>
+```
+
+```
+<div :class="{demo: true, active: boxASelected}" @click="boxSelected('A')"></div>
+```
+
+```
+<div class="demo" :class="{active: boxASelected}" @click="boxSelected('A')"></div>
+```
