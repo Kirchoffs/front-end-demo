@@ -23,6 +23,15 @@ const app = Vue.createApp({
 app.mount('#app');
 ```
 
+### Basic Elements
+- The `$el` object represents the root DOM node of the Vue component. The `$el` object does not exist until the Vue application is mounted.
+
+- Interpolation: double curly braces
+
+- Bind data - v-bind (:)
+
+- Listen for events - v-on (@)
+
 ### Form
 ```
 <div id="app">
