@@ -2,7 +2,40 @@
 
 Vue uses a declarative approach.
 
+### Get Started
+#### Script Tag
+Just put below script tag in the HTML
+```
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+```
+
+#### Vite
+```
+>> npm create vite@latest todo-list -- --template vue
+
+>> cd todo-list
+>> npm install
+>> npm run dev
+```
+
+#### create-vue
+```
+>> npm create vue@latest todo-list
+
+>> cd todo-list
+>> npm install
+>> npm run dev
+```
+
 ### Basic Framework
+```
+<div id="app">
+  <h1>{{ counter }}</h1>
+  <button v-on:click="increase">Increase</button>
+  <button v-on:click="decrease">Decrease</button>
+</div>
+```
+
 ```
 const app = Vue.createApp({
   data() {
@@ -22,6 +55,8 @@ const app = Vue.createApp({
 
 app.mount('#app');
 ```
+
+`{{ counter }}` is the interpolation syntax (also called mustache). It is used to display the value of the counter variable.
 
 ### Basic Elements
 - The `$el` object represents the root DOM node of the Vue component. The `$el` object does not exist until the Vue application is mounted.
@@ -43,6 +78,17 @@ app.mount('#app');
 
 In order to prevent default behavior of form submit action, we need to wrap the form into the div tag.
 
+### Event
+```
+<input type="text" v-on:click="clickOperation" />
+
+<input type="text" v-on:keydown="keydownOperation" />
+```
+
+#### Difference between keydown and keyup
+- keydown: fires when the user depresses a key. It repeats while the user keeps the key depressed.
+- keyup: fires when the user releases a key.
+
 ### Event Modifier
 Right click to trigger the event.
 ```
@@ -52,6 +98,21 @@ Right click to trigger the event.
 Enter Key Trigger
 ```
 <input type="text" v-on:keyup.enter="confirmInput" />
+```
+
+### Computed Property
+
+### Watcher Property
+
+### Directive
+- Attributes with __v-__ prefix
+- Take arguments v-__bind__
+- Single JavaScript expressions
+- Reactive
+
+```
+<img v-bind:src="imgSrc" v-bind:alt="imgAlt" />
+<img :src="imgSrc" :alt="imgAlt" />
 ```
 
 ### Short Hand
